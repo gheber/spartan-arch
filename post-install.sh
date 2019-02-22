@@ -14,13 +14,7 @@ head -n -5 /etc/X11/xinit/xinitrc > ~/.xinitrc
 echo 'exec VBoxClient --clipboard -d &' >> ~/.xinitrc
 echo 'exec VBoxClient --display -d &' >> ~/.xinitrc
 echo 'exec i3 &' >> ~/.xinitrc
-echo 'exec nitrogen --restore &' >> ~/.xinitrc
 echo 'exec emacs' >> ~/.xinitrc
-
-# emacs config
-git clone https://github.com/abrochard/emacs-config.git
-echo '(load-file "~/emacs-config/bootstrap.el")' > ~/.emacs
-echo '(server-start)' >> ~/.emacs
 
 # xterm setup
 echo 'XTerm*background:black' > ~/.Xdefaults
