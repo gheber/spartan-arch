@@ -50,16 +50,15 @@ pacman -S --noconfirm xorg xorg-xinit xterm
 
 # install virtualbox guest modules
 echo 'Installing VB-guest-modules'
-pacman -S --noconfirm virtualbox-guest-modules-arch virtualbox-guest-utils
+pacman -S --noconfirm linux-headers virtualbox-guest-dkms virtualbox-guest-utils
 
-# vbox modules
-echo 'vboxsf' > /etc/modules-load.d/vboxsf.conf
+systemctl enable vboxservice.service
 
 # install dev envt.
 echo 'Installing dev environment'
 pacman -S --noconfirm git emacs vim wget perl make gcc grep tmux i3 dmenu
 pacman -S --noconfirm chromium curl autojump openssh sudo mlocate
-pacman -S --noconfirm ttf-hack lxterminal nitrogen ntp dhclient keychain
+pacman -S --noconfirm ttf-hack lxterminal ntp dhclient keychain
 pacman -S --noconfirm python-pip pkg-config
 pip install pipenv bpython ipython
 
