@@ -17,10 +17,10 @@ echo 'exec i3 &' >> ~/.xinitrc
 echo 'exec emacs' >> ~/.xinitrc
 
 # xterm setup
-echo 'XTerm*background:black' > ~/.Xdefaults
-echo 'XTerm*foreground:white' >> ~/.Xdefaults
-echo 'UXTerm*background:black' >> ~/.Xdefaults
-echo 'UXTerm*foreground:white' >> ~/.Xdefaults
+echo 'XTerm*background:white' > ~/.Xdefaults
+echo 'XTerm*foreground:black' >> ~/.Xdefaults
+echo 'UXTerm*background:white' >> ~/.Xdefaults
+echo 'UXTerm*foreground:black' >> ~/.Xdefaults
 
 # tmux setup like emacs
 cd
@@ -49,15 +49,6 @@ sed -i 's/^order += "battery 0"/#order += "battery 0"/' ~/.config/i3status/confi
 git config --global user.name "Gerd Heber"
 git config --global user.email "gheber@hdfgroup.org"
 git config --global code.editor emacsclient
-#echo '    AddKeysToAgent yes' >> ~/.ssh/config
-
-# if there are ssh key
-if [ -d ~/workspace/ssh ]; then
-    if [ -d ~/.ssh ]; then
-        rm -rf ~/.ssh
-    fi
-    ln -s ~/workspace/ssh ~/.ssh
-fi
 
 # temporary workaround
 cd
