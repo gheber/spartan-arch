@@ -46,8 +46,8 @@ sed -i 's/^order += "wireless _first_"/#order += "wireless _first_"/' ~/.config/
 sed -i 's/^order += "battery 0"/#order += "battery 0"/' ~/.config/i3status/config
 
 # git first time setup
-git config --global user.name $(whoami)
-git config --global user.email $(whoami)@$(hostname)
+git config --global user.name "Gerd Heber"
+git config --global user.email "gheber@hdfgroup.org"
 git config --global code.editor emacsclient
 #echo '    AddKeysToAgent yes' >> ~/.ssh/config
 
