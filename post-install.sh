@@ -49,7 +49,7 @@ sed -i 's/^order += "battery 0"/#order += "battery 0"/' ~/.config/i3status/confi
 git config --global user.name $(whoami)
 git config --global user.email $(whoami)@$(hostname)
 git config --global code.editor emacsclient
-echo '    AddKeysToAgent yes' >> ~/.ssh/config
+#echo '    AddKeysToAgent yes' >> ~/.ssh/config
 
 # if there are ssh key
 if [ -d ~/workspace/ssh ]; then
