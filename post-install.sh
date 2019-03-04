@@ -11,6 +11,7 @@ echo 'Waiting for internet connection'
 # xinitrc
 cd
 head -n -5 /etc/X11/xinit/xinitrc > ~/.xinitrc
+echo 'xrandr --output Virtual-1 --mode 1920x1200' >> ~/.xinitrc
 echo 'exec VBoxClient --clipboard -d &' >> ~/.xinitrc
 echo 'exec VBoxClient --display -d &' >> ~/.xinitrc
 echo 'exec i3 &' >> ~/.xinitrc
@@ -21,14 +22,6 @@ echo 'XTerm*background:white' > ~/.Xdefaults
 echo 'XTerm*foreground:black' >> ~/.Xdefaults
 echo 'UXTerm*background:white' >> ~/.Xdefaults
 echo 'UXTerm*foreground:black' >> ~/.Xdefaults
-
-# tmux setup like emacs
-cd
-echo 'unbind C-b' > ~/.tmux.conf
-echo 'set -g prefix C-x' >> ~/.tmux.conf
-echo 'bind C-x send-prefix' >> ~/.tmux.conf
-echo 'bind 2 split-window' >> ~/.tmux.conf
-echo 'bind 3 split-window -h' >> ~/.tmux.conf
 
 # environment variable
 echo 'export EDITOR=emacsclient' >> ~/.bashrc
