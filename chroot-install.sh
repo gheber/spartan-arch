@@ -63,6 +63,8 @@ pacman -S --noconfirm python-pip python-pylint pkg-config gnuplot graphviz
 pacman -S --noconfirm ccid pcsclite
 pip install pipenv bpython ipython jupyter-notebook
 
+systemctl enable pcscd.service
+
 # user mgmt
 echo 'Setting up user'
 read -t 1 -n 1000000 discard      # discard previous input
