@@ -59,9 +59,9 @@ echo 'Installing dev environment'
 pacman -S --noconfirm git emacs vim wget perl make gcc grep tmux i3 dmenu
 pacman -S --noconfirm chromium curl autojump openssh sudo mlocate ispell m4 imagemagick
 pacman -S --noconfirm ttf-hack ttf-dejavu lxterminal ntp dhclient keychain texlive-most
-pacman -S --noconfirm python-pip python-pylint pkg-config gnuplot graphviz
+pacman -S --noconfirm python-pip python-pylint pkg-config gnuplot graphviz jupyter-notebook
 pacman -S --noconfirm ccid pcsclite
-pip install pipenv bpython ipython jupyter-notebook
+pip install pipenv bpython ipython
 
 systemctl enable pcscd.service
 
