@@ -43,6 +43,9 @@ mount /dev/sda1 /mnt
 # pacstrap
 pacstrap /mnt base
 
+# hostname
+echo "emacs" >> /mnt/etc/hostname
+
 # fstab
 genfstab -U /mnt >> /mnt/etc/fstab
 echo "org /home/$user/org vboxsf uid=$user,gid=wheel,rw,dmode=700,fmode=600,nofail 0 0" >> /mnt/etc/fstab
