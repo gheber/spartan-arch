@@ -57,10 +57,11 @@ systemctl enable vboxservice.service
 # install dev envt.
 echo 'Installing dev environment'
 pacman -S --noconfirm git emacs vim wget perl make gcc grep tmux i3 dmenu
-pacman -S --noconfirm chromium curl autojump openssh sudo mlocate
-pacman -S --noconfirm ttf-hack lxterminal ntp dhclient keychain
-pacman -S --noconfirm python-pip pkg-config
-pip install pipenv bpython ipython
+pacman -S --noconfirm chromium curl autojump openssh sudo mlocate ispell m4 imagemagick
+pacman -S --noconfirm ttf-hack ttf-dejavu lxterminal ntp dhclient keychain texlive-most
+pacman -S --noconfirm python-pip python-pylint pkg-config gnuplot graphviz
+pacman -S --noconfirm ccid pcsclite
+pip install pipenv bpython ipython jupyter-notebook
 
 # user mgmt
 echo 'Setting up user'
