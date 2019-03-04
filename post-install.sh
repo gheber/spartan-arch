@@ -26,6 +26,8 @@ echo 'UXTerm*foreground:black' >> ~/.Xdefaults
 # environment variable
 echo 'export EDITOR=emacsclient' >> ~/.bashrc
 echo 'export TERMINAL=lxterminal' >> ~/.bashrc
+echo 'export GPG_TTY="$(tty)"' >> ~/.bashrc
+echo 'export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"' >> ~/.bashrc
 
 # i3status
 if [ ! -d ~/.config ]; then
