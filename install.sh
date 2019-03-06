@@ -57,5 +57,6 @@ wget https://raw.githubusercontent.com/gheber/spartan-arch/master/chroot-install
 arch-chroot /mnt /bin/bash ./chroot-install.sh $user $password $fast
 
 # reboot
+umount /mnt/home
 umount /mnt
 reboot
