@@ -39,12 +39,18 @@ mkfs.ext4 /dev/sda1
 mkswap /dev/sda2
 swapon /dev/sda2
 mount /dev/sda1 /mnt
+mkdir /mnt/home
+
+parted --script /dev/sdb mklabel msdos mkpart primary ext4 0% 100%
+mkfs.ext4 /dev/sdb1
+mount /dev/sdb1 /mnt/home
 
 # pacstrap
 pacstrap /mnt base
 
 # fstab
 genfstab -U /mnt >> /mnt/etc/fstab
+genfstab -U /mnt/home >> /mnt/etc/fstab
 
 # chroot
 wget https://raw.githubusercontent.com/gheber/spartan-arch/master/chroot-install.sh -O /mnt/chroot-install.sh
