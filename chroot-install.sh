@@ -72,10 +72,6 @@ echo 'root:'$password | chpasswd
 useradd -m -G wheel -s /bin/bash $user
 touch /home/$user/.bashrc
 chown $user:$user /home/$user/.bashrc
-mkdir /home/$user/org
-chown $user:$user /home/$user/org
-mkdir /home/$user/workspace
-chown $user:$user /home/$user/workspace
 echo $user:$password | chpasswd
 echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
 
