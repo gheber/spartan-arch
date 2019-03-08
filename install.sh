@@ -51,6 +51,7 @@ pacstrap /mnt base
 # fstab
 genfstab -U /mnt >> /mnt/etc/fstab
 genfstab -U /mnt/home >> /mnt/etc/fstab
+echo "archie /home/gheber/bruin vboxsf uid=gheber,gid=wheel,rw,dmode=700,fmode=600,nofail 0 0" >> /etc/fstab
 
 # chroot
 wget https://raw.githubusercontent.com/gheber/spartan-arch/master/chroot-install.sh -O /mnt/chroot-install.sh
